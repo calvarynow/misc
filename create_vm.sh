@@ -10,7 +10,7 @@ RAM_SIZE="${4:-${RAM_SIZE:-8192}}"
 HDD_SIZE="${5:-${HDD_SIZE:-51200}}"
 NUM_CPUS="${6:-${NUM_CPUS:-2}}"
 #VRDE_PORT="${7:-${VRDE_PORT:-3393}}"
-#PNIC=enp6s0
+NIC_NAME=enp0s25
 
 SCRIPT_NAME="$(basename "$0")"
 
@@ -72,7 +72,7 @@ VBoxManage modifyvm "$VM_NAME" \
     --pae on \
     --apic on \
     --usbxhci on \
-    --nic1 bridged
+    --nic1 bridged --bridgeadapter1 "$NIC_NAME"
 [ $? -eq 0 ] || exit 1
 
 VBoxManage createmedium disk --filename "$HDD_PATH" --size "$HDD_SIZE" --format VDI || exit 11
