@@ -6,221 +6,39 @@
 ** Use VBoxManage or the VirtualBox Manager GUI to make changes.
 -->
 <VirtualBox xmlns="http://www.virtualbox.org/" version="1.15-linux">
-  <Machine uuid="{c18366b7-1af2-4d60-b40f-10fd4ec7aed1}" name="W10_MBS" OSType="Windows10_64" currentSnapshot="{e8398f4d-ff45-4e37-a585-a3ad52711d5c}" snapshotFolder="Snapshots" lastStateChange="2020-07-26T00:13:22Z">
+  <Machine uuid="{15797fa5-a2c4-4bf2-b5aa-f832bf90be28}" name="W10" OSType="Windows10_64" snapshotFolder="Snapshots" lastStateChange="2020-07-31T13:20:42Z">
     <MediaRegistry>
       <HardDisks>
-        <HardDisk uuid="{97b9ac06-1b2a-4692-a186-06b72e466b53}" location="W10_MBS.vdi" format="VDI" type="Normal">
-          <HardDisk uuid="{707945a2-3039-49c3-9695-ac9989a3a663}" location="Snapshots/{707945a2-3039-49c3-9695-ac9989a3a663}.vdi" format="VDI">
-            <HardDisk uuid="{b17e710b-9226-445a-954a-7a3a44c18875}" location="Snapshots/{b17e710b-9226-445a-954a-7a3a44c18875}.vdi" format="VDI">
-              <HardDisk uuid="{dd754b93-b3ba-43bc-9160-6e28f61fddf4}" location="Snapshots/{dd754b93-b3ba-43bc-9160-6e28f61fddf4}.vdi" format="VDI"/>
-            </HardDisk>
-          </HardDisk>
-        </HardDisk>
+        <HardDisk uuid="{f5e8dcc7-b745-4470-ab9b-dd7f5184b645}" location="W10.vdi" format="VDI" type="Normal"/>
       </HardDisks>
       <DVDImages>
         <Image uuid="{4bd694a5-c563-445f-a8a2-2e42a9e492f7}" location="/home/kharrison/Downloads/SW_DVD9_Win_Pro_10_1909.4_64BIT_English_Pro_Ent_EDU_N_MLF_X22-28609.ISO"/>
       </DVDImages>
     </MediaRegistry>
     <ExtraData>
-      <ExtraDataItem name="GUI/InformationWindowGeometry" value="631,370,634,344"/>
-      <ExtraDataItem name="GUI/LastNormalWindowPosition" value="138,32,1600,1010,max"/>
-      <ExtraDataItem name="GUI/LastScaleWindowPosition" value="640,159,1187,602,max"/>
-      <ExtraDataItem name="GUI/ScaleFactor" value="1.25"/>
+      <ExtraDataItem name="GUI/LastCloseAction" value="PowerOff"/>
+      <ExtraDataItem name="GUI/LastNormalWindowPosition" value="354,157,1024,815"/>
     </ExtraData>
-    <Snapshot uuid="{0ad2eddc-9d7e-4d22-9b8a-28b0104bf6dc}" name="AfterMBSSetup" timeStamp="2020-07-25T23:29:03Z" stateFile="Snapshots/2020-07-25T23-29-03-446029000Z.sav">
-      <Hardware>
-        <CPU count="2">
-          <PAE enabled="true"/>
-          <LongMode enabled="true"/>
-          <HardwareVirtExLargePages enabled="false"/>
-        </CPU>
-        <Memory RAMSize="32768"/>
-        <HID Pointing="USBTablet"/>
-        <Paravirt provider="Default"/>
-        <Boot>
-          <Order position="1" device="DVD"/>
-          <Order position="2" device="HardDisk"/>
-          <Order position="3" device="None"/>
-          <Order position="4" device="None"/>
-        </Boot>
-        <Display VRAMSize="128"/>
-        <VideoCapture fps="25" options="ac_enabled=false"/>
-        <RemoteDisplay enabled="false"/>
-        <BIOS>
-          <IOAPIC enabled="true"/>
-        </BIOS>
-        <USB>
-          <Controllers>
-            <Controller name="XHCI" type="XHCI"/>
-          </Controllers>
-        </USB>
-        <Network>
-          <Adapter slot="0" enabled="true" MACAddress="08002712F81E" cable="true" type="82540EM">
-            <DisabledModes>
-              <InternalNetwork name="intnet"/>
-              <NATNetwork name="NatNetwork"/>
-            </DisabledModes>
-            <BridgedInterface name="enp0s25"/>
-          </Adapter>
-        </Network>
-        <AudioAdapter controller="HDA" driver="Pulse" enabled="true" enabledIn="false"/>
-        <SharedFolders>
-          <SharedFolder name="Downloads" hostPath="/home/kharrison/Downloads" writable="true" autoMount="false"/>
-        </SharedFolders>
-        <Clipboard mode="Bidirectional"/>
-        <GuestProperties>
-          <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="en_US" timestamp="1595719703752601000" flags="RDONLYGUEST"/>
-        </GuestProperties>
-      </Hardware>
-      <StorageControllers>
-        <StorageController name="SATA" type="AHCI" PortCount="2" useHostIOCache="false" Bootable="true" IDE0MasterEmulationPort="0" IDE0SlaveEmulationPort="1" IDE1MasterEmulationPort="2" IDE1SlaveEmulationPort="3">
-          <AttachedDevice type="HardDisk" hotpluggable="false" port="0" device="0">
-            <Image uuid="{97b9ac06-1b2a-4692-a186-06b72e466b53}"/>
-          </AttachedDevice>
-          <AttachedDevice passthrough="false" type="DVD" hotpluggable="false" port="1" device="0"/>
-        </StorageController>
-      </StorageControllers>
-      <Snapshots>
-        <Snapshot uuid="{cd7dac8c-3932-42ea-b9b7-481856957459}" name="afterdomain" timeStamp="2020-07-26T00:00:58Z" stateFile="Snapshots/2020-07-26T00-00-58-474648000Z.sav">
-          <Hardware>
-            <CPU count="2">
-              <PAE enabled="true"/>
-              <LongMode enabled="true"/>
-              <HardwareVirtExLargePages enabled="false"/>
-            </CPU>
-            <Memory RAMSize="32768"/>
-            <HID Pointing="USBTablet"/>
-            <Paravirt provider="Default"/>
-            <Boot>
-              <Order position="1" device="DVD"/>
-              <Order position="2" device="HardDisk"/>
-              <Order position="3" device="None"/>
-              <Order position="4" device="None"/>
-            </Boot>
-            <Display VRAMSize="128"/>
-            <VideoCapture fps="25" options="ac_enabled=false"/>
-            <RemoteDisplay enabled="false"/>
-            <BIOS>
-              <IOAPIC enabled="true"/>
-            </BIOS>
-            <USB>
-              <Controllers>
-                <Controller name="XHCI" type="XHCI"/>
-              </Controllers>
-            </USB>
-            <Network>
-              <Adapter slot="0" enabled="true" MACAddress="08002712F81E" cable="true" type="82540EM">
-                <DisabledModes>
-                  <InternalNetwork name="intnet"/>
-                  <NATNetwork name="NatNetwork"/>
-                </DisabledModes>
-                <BridgedInterface name="enp0s25"/>
-              </Adapter>
-            </Network>
-            <AudioAdapter controller="HDA" driver="Pulse" enabled="true" enabledIn="false"/>
-            <SharedFolders>
-              <SharedFolder name="Downloads" hostPath="/home/kharrison/Downloads" writable="true" autoMount="true"/>
-            </SharedFolders>
-            <Clipboard mode="Bidirectional"/>
-            <GuestProperties>
-              <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="en_US" timestamp="1595720509004699000" flags="RDONLYGUEST"/>
-            </GuestProperties>
-          </Hardware>
-          <StorageControllers>
-            <StorageController name="SATA" type="AHCI" PortCount="2" useHostIOCache="false" Bootable="true" IDE0MasterEmulationPort="0" IDE0SlaveEmulationPort="1" IDE1MasterEmulationPort="2" IDE1SlaveEmulationPort="3">
-              <AttachedDevice type="HardDisk" hotpluggable="false" port="0" device="0">
-                <Image uuid="{707945a2-3039-49c3-9695-ac9989a3a663}"/>
-              </AttachedDevice>
-              <AttachedDevice passthrough="false" type="DVD" hotpluggable="false" port="1" device="0"/>
-            </StorageController>
-          </StorageControllers>
-          <Snapshots>
-            <Snapshot uuid="{e8398f4d-ff45-4e37-a585-a3ad52711d5c}" name="AfterJoinedToDomain" timeStamp="2020-07-26T00:13:22Z" stateFile="Snapshots/2020-07-26T00-13-22-419725000Z.sav">
-              <Hardware>
-                <CPU count="2">
-                  <PAE enabled="true"/>
-                  <LongMode enabled="true"/>
-                  <HardwareVirtExLargePages enabled="false"/>
-                </CPU>
-                <Memory RAMSize="32768"/>
-                <HID Pointing="USBTablet"/>
-                <Paravirt provider="Default"/>
-                <Boot>
-                  <Order position="1" device="DVD"/>
-                  <Order position="2" device="HardDisk"/>
-                  <Order position="3" device="None"/>
-                  <Order position="4" device="None"/>
-                </Boot>
-                <Display VRAMSize="128"/>
-                <VideoCapture fps="25" options="ac_enabled=false"/>
-                <RemoteDisplay enabled="false"/>
-                <BIOS>
-                  <IOAPIC enabled="true"/>
-                </BIOS>
-                <USB>
-                  <Controllers>
-                    <Controller name="XHCI" type="XHCI"/>
-                  </Controllers>
-                </USB>
-                <Network>
-                  <Adapter slot="0" enabled="true" MACAddress="08002712F81E" cable="true" type="82540EM">
-                    <DisabledModes>
-                      <InternalNetwork name="intnet"/>
-                      <NATNetwork name="NatNetwork"/>
-                    </DisabledModes>
-                    <BridgedInterface name="enp0s25"/>
-                  </Adapter>
-                </Network>
-                <AudioAdapter controller="HDA" driver="Pulse" enabled="true" enabledIn="false"/>
-                <SharedFolders>
-                  <SharedFolder name="Downloads" hostPath="/home/kharrison/Downloads" writable="true" autoMount="true"/>
-                </SharedFolders>
-                <Clipboard mode="Bidirectional"/>
-                <GuestProperties>
-                  <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="en_US" timestamp="1595722372557223000" flags="RDONLYGUEST"/>
-                </GuestProperties>
-              </Hardware>
-              <StorageControllers>
-                <StorageController name="SATA" type="AHCI" PortCount="2" useHostIOCache="false" Bootable="true" IDE0MasterEmulationPort="0" IDE0SlaveEmulationPort="1" IDE1MasterEmulationPort="2" IDE1SlaveEmulationPort="3">
-                  <AttachedDevice type="HardDisk" hotpluggable="false" port="0" device="0">
-                    <Image uuid="{b17e710b-9226-445a-954a-7a3a44c18875}"/>
-                  </AttachedDevice>
-                  <AttachedDevice passthrough="false" type="DVD" hotpluggable="false" port="1" device="0"/>
-                </StorageController>
-              </StorageControllers>
-            </Snapshot>
-          </Snapshots>
-        </Snapshot>
-      </Snapshots>
-    </Snapshot>
     <Hardware>
       <CPU count="2">
         <PAE enabled="true"/>
         <LongMode enabled="true"/>
         <HardwareVirtExLargePages enabled="false"/>
       </CPU>
-      <Memory RAMSize="32768"/>
-      <HID Pointing="USBTablet"/>
+      <Memory RAMSize="8192"/>
       <Paravirt provider="Default"/>
-      <Boot>
-        <Order position="1" device="DVD"/>
-        <Order position="2" device="HardDisk"/>
-        <Order position="3" device="None"/>
-        <Order position="4" device="None"/>
-      </Boot>
       <Display VRAMSize="128"/>
-      <VideoCapture fps="25" options="ac_enabled=false"/>
       <RemoteDisplay enabled="false"/>
       <BIOS>
         <IOAPIC enabled="true"/>
       </BIOS>
       <USB>
         <Controllers>
-          <Controller name="XHCI" type="XHCI"/>
+          <Controller name="xHCI" type="XHCI"/>
         </Controllers>
       </USB>
       <Network>
-        <Adapter slot="0" enabled="true" MACAddress="08002712F81E" cable="true" type="82540EM">
+        <Adapter slot="0" enabled="true" MACAddress="080027480A7C" cable="true" type="82540EM">
           <DisabledModes>
             <InternalNetwork name="intnet"/>
             <NATNetwork name="NatNetwork"/>
@@ -228,21 +46,25 @@
           <BridgedInterface name="enp0s25"/>
         </Adapter>
       </Network>
-      <AudioAdapter controller="HDA" driver="Pulse" enabled="true" enabledIn="false"/>
+      <AudioAdapter driver="Pulse" enabled="true" enabledIn="false" enabledOut="false"/>
       <SharedFolders>
-        <SharedFolder name="Downloads" hostPath="/home/kharrison/Downloads" writable="true" autoMount="true"/>
+        <SharedFolder name="shared" hostPath="/home/kharrison/Downloads" writable="true" autoMount="false"/>
       </SharedFolders>
       <Clipboard mode="Bidirectional"/>
       <GuestProperties>
-        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="en_US" timestamp="1595722372557223000" flags="RDONLYGUEST"/>
+        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="en_US" timestamp="1596201643111764000" flags=""/>
       </GuestProperties>
     </Hardware>
     <StorageControllers>
-      <StorageController name="SATA" type="AHCI" PortCount="2" useHostIOCache="false" Bootable="true" IDE0MasterEmulationPort="0" IDE0SlaveEmulationPort="1" IDE1MasterEmulationPort="2" IDE1SlaveEmulationPort="3">
-        <AttachedDevice type="HardDisk" hotpluggable="false" port="0" device="0">
-          <Image uuid="{dd754b93-b3ba-43bc-9160-6e28f61fddf4}"/>
+      <StorageController name="IDE Controller" type="PIIX4" PortCount="2" useHostIOCache="true" Bootable="true">
+        <AttachedDevice passthrough="false" type="DVD" hotpluggable="false" port="1" device="0">
+          <Image uuid="{4bd694a5-c563-445f-a8a2-2e42a9e492f7}"/>
         </AttachedDevice>
-        <AttachedDevice passthrough="false" type="DVD" hotpluggable="false" port="1" device="0"/>
+      </StorageController>
+      <StorageController name="SATA Controller" type="AHCI" PortCount="30" useHostIOCache="false" Bootable="true" IDE0MasterEmulationPort="0" IDE0SlaveEmulationPort="1" IDE1MasterEmulationPort="2" IDE1SlaveEmulationPort="3">
+        <AttachedDevice type="HardDisk" hotpluggable="false" port="0" device="0">
+          <Image uuid="{f5e8dcc7-b745-4470-ab9b-dd7f5184b645}"/>
+        </AttachedDevice>
       </StorageController>
     </StorageControllers>
   </Machine>
